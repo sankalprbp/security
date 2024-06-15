@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Risk Assessment Calculator</title>
+    <link rel="stylesheet" href="{% static 'css/calculator.css' %}">
+</head>
+<body>
+    <h1>Risk Assessment Calculator</h1>
+
+    <div class="factors">
+        {% for factor in factors %}
+        <div class="factor">
+            <label>{{ factor.name }}</label>
+            <select>
+                {% for option in factor.options %}
+                <option value="{{ option.value }}">{{ option.label }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        {% endfor %}
+    </div>
+
+    <div class="result">
+        <h2>Result</h2>
+        <p id="result-value">0</p>
+    </div>
+
+    <script src="{% static 'js/calculator.js' %}"></script>
+</body>
+</html>

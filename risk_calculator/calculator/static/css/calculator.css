@@ -1,0 +1,33 @@
+/* calculator.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.factors {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.factor {
+    margin: 10px;
+}
+
+.result {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#result-value {
+    font-size: 24px;
+    color: green;
+}
